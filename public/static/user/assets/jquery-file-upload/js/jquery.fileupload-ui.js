@@ -385,7 +385,7 @@
             var link = $(this),
                 url = link.prop('href'),
                 name = link.prop('download'),
-                type = 'application/octet-stream';
+                type = 'applicationController/octet-stream';
             link.bind('dragstart', function (e) {
                 try {
                     e.originalEvent.dataTransfer.setData(

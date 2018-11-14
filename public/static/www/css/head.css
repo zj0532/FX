@@ -1,35 +1,36 @@
-.text-menu{
-    font-size:12px;
-    font-family:FZLTHJW--GB1-0;
-    font-weight:normal;
-    color:rgba(0,130,130,1);
-    margin-top: 5px;
-}
-.text-menu ul li{
+.logo{
+    margin:3px 0 0 253px;
+    width: 174px;
+    height: 37px;
     float: left;
-    margin-left: 10px;
 }
-.text-menu ul li a{
-    color: #929292;
+.login_text{
+
+    float: right;
+    margin-right:253px;
 }
-.text-menu ul li a:hover{
-    color: #8DBE42;
-    text-decoration: none;
+.login_text ul li{
+    list-style: none;
+    float: left;
+    margin-top: 15px;
 }
-.head-about{
-    position: absolute;
-    top: -79px;
+.login_text ul li:not(:nth-child(1)){
+    margin-left: 70px;
+}
+.login_text ul li a{
+    font-size:11px;
+    font-family:MicrosoftYaHei;
+    font-weight:400;
+    color:rgba(255,255,255,1);
+}
+.head-bj{
+    height: 42px;
 }
 @media (min-width:1367px) {
-    .text-menu{
-        font-size:16px;
-        font-family:FZLTHJW--GB1-0;
-        font-weight:normal;
-        color:rgba(0,130,130,1);
-        margin-top: 5px;
+    .login{
+
     }
-    .head-about{
-        position: absolute;
-        top: -83px;
+    .login_text{
+
     }
 }

@@ -18,13 +18,13 @@ class IndexController extends Controller
 
     public function index(){
         try{
-            $list=$this->new->paginate(3);
-            foreach ($list as $key=>$value){
-                $list[$key]['ns_descript'] = mb_substr($value['ns_descript'],0,30,'utf-8');
-            }
-            $new_imgpath = config("news_upload_path");
-            $this->assign('new_imgpath',$new_imgpath);
-            $this->assign('list',$list);
+//            $list=$this->new->paginate(3);
+//            foreach ($list as $key=>$value){
+//                $list[$key]['ns_descript'] = mb_substr($value['ns_descript'],0,30,'utf-8');
+//            }
+//            $new_imgpath = config("news_upload_path");
+//            $this->assign('new_imgpath',$new_imgpath);
+//            $this->assign('list',$list);
         }catch (\Exception $e){
             Log::write($e->getMessage(),'error');
         }

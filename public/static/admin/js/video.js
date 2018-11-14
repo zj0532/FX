@@ -1975,7 +1975,7 @@
                         url: l,
                         rawRequest: o
                     };
-                if ("json" in r && !1 !== r.json && (f = !0, d.accept || d.Accept || (d.Accept = "application/json"), "GET" !== c && "HEAD" !== c && (d["content-type"] || d["Content-Type"] || (d["Content-Type"] = "application/json"), h = JSON.stringify(!0 === r.json ? h: r.json))), o.onreadystatechange = function() {
+                if ("json" in r && !1 !== r.json && (f = !0, d.accept || d.Accept || (d.Accept = "applicationController/json"), "GET" !== c && "HEAD" !== c && (d["content-type"] || d["Content-Type"] || (d["Content-Type"] = "applicationController/json"), h = JSON.stringify(!0 === r.json ? h: r.json))), o.onreadystatechange = function() {
                     4 === o.readyState && setTimeout(e, 0)
                 },
                     o.onload = e, o.onerror = t, o.onprogress = function() {},
@@ -3746,7 +3746,7 @@
                     mp3: "audio/mpeg",
                     aac: "audio/aac",
                     oga: "audio/ogg",
-                    m3u8: "application/x-mpegURL"
+                    m3u8: "applicationController/x-mpegURL"
                 },
                 Ir = function() {
                     var e = 0 < arguments.length && void 0 !== arguments[0] ? arguments[0] : "",
@@ -6889,7 +6889,7 @@
                                         t[e] = i[e]
                                     })
                             }
-                            if (t.setAttribute("tabindex", "-1"), pt && t.setAttribute("role", "application"), t.removeAttribute("width"), t.removeAttribute("height"), Object.getOwnPropertyNames(n).forEach(function(e) {
+                            if (t.setAttribute("tabindex", "-1"), pt && t.setAttribute("role", "applicationController"), t.removeAttribute("width"), t.removeAttribute("height"), Object.getOwnPropertyNames(n).forEach(function(e) {
                                 r && "class" === e || i.setAttribute(e, n[e]),
                                 r && t.setAttribute(e, n[e])
                             }), t.playerId = t.id, t.id += "_html5_api", t.className = "vjs-tech", t.player = i.player = this, this.addClass("vjs-paused"), !0 !== g.VIDEOJS_NO_DYNAMIC_STYLE) {
@@ -9109,7 +9109,7 @@
                 },
                 ks = function(e) {
                     if ("" === e) throw new Error(is);
-                    var t = (new g.DOMParser).parseFromString(e, "application/xml"),
+                    var t = (new g.DOMParser).parseFromString(e, "applicationController/xml"),
                         i = t && "MPD" === t.documentElement.tagName ? t.documentElement: null;
                     if (!i || i && 0 < i.getElementsByTagName("parsererror").length) throw new Error(rs);
                     return i
@@ -10682,7 +10682,7 @@
                 },
                 Iu = "undefined" != typeof window ? window: {},
                 xu = "undefined" == typeof Symbol ? "__target": Symbol(),
-                Du = "application/javascript",
+                Du = "applicationController/javascript",
                 Ru = Iu.BlobBuilder || Iu.WebKitBlobBuilder || Iu.MozBlobBuilder || Iu.MSBlobBuilder,
                 Mu = Iu.URL || Iu.webkitURL || Mu && Mu.msURL,
                 Uu = Iu.Worker;
@@ -16271,11 +16271,11 @@
             Zl.supportsNativeHls = function() {
                 var t = p.createElement("video");
                 if (!La.getTech("Html5").isSupported()) return ! 1;
-                return ["application/vnd.apple.mpegurl", "audio/mpegurl", "audio/x-mpegurl", "application/x-mpegurl", "video/x-mpegurl", "video/mpegurl", "application/mpegurl"].some(function(e) {
+                return ["applicationController/vnd.apple.mpegurl", "audio/mpegurl", "audio/x-mpegurl", "applicationController/x-mpegurl", "video/x-mpegurl", "video/mpegurl", "applicationController/mpegurl"].some(function(e) {
                     return /maybe|probably/i.test(t.canPlayType(e))
                 })
             } (),
-                Zl.supportsNativeDash = !!La.getTech("Html5").isSupported() && /maybe|probably/i.test(p.createElement("video").canPlayType("application/dash+xml")),
+                Zl.supportsNativeDash = !!La.getTech("Html5").isSupported() && /maybe|probably/i.test(p.createElement("video").canPlayType("applicationController/dash+xml")),
                 Zl.supportsTypeNatively = function(e) {
                     return "hls" === e ? Zl.supportsNativeHls: "dash" === e && Zl.supportsNativeDash
                 },
