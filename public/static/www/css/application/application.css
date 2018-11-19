@@ -1,0 +1,99 @@
+.docking-system{
+    margin-top: 89px;
+}
+.docking-system img{
+    width:3px;
+    height:25px;
+    margin-top: -10px;
+}
+.docking-system span{
+    font-size:25px;
+    font-family:MicrosoftYaHei;
+    font-weight:bold;
+    color:rgba(51,51,51,1);
+    line-height:25px;
+    margin-left: 18px;
+}
+.docking-game-system{
+    margin: 329px 0 0 81px;
+}
+.game p{
+    font-size:18px;
+    font-family:MicrosoftYaHei;
+    font-weight:bold;
+    color:rgba(51,51,51,1);
+    line-height:42px;
+}
+.game-text{
+    font-size:11px;
+    font-family:MicrosoftYaHei;
+    font-weight:400;
+    color:rgba(51,51,51,1);
+    line-height:25px;
+}
+.game div{
+    width:228px;
+    height:188px;
+}
+.game img:first-child{
+    width:521px;
+    height:375px;
+    position: absolute;
+    margin: 268px 93px;
+    z-index: 1;
+}
+.game img:nth-child(2){
+    width:591px;
+    height:421px;
+    position: absolute;
+    margin: 133px 221px;
+}
+.pawn img:first-child{
+    width:198px;
+    height:236px;
+    position: absolute;
+    z-index: 1;
+}
+.pawn img:nth-child(2){
+    width:555px;
+    height:395px;
+    position: absolute;
+    top: 104px;
+    left: 93px;
+    z-index: 2;
+}
+.pawn img:nth-child(3){
+    width:341px;
+    height:246px;
+    position: absolute;
+    right: 88px;
+    top: 195px;
+}
+.pawn{
+    margin-top: 280px;
+    height: 700px;
+}
+.two-text{
+    width:293px;;
+    height:104px;
+    position: absolute;
+    right: 79px;
+    top:257px;
+}
+.two-text p{
+    font-size:18px;
+    font-family:MicrosoftYaHei;
+    font-weight:bold;
+    color:rgba(51,51,51,1);
+    line-height:42px;
+}
+.two-text span{
+    font-size:11px;
+    font-family:MicrosoftYaHei;
+    font-weight:400;
+    color:rgba(51,51,51,1);
+    line-height:25px;
+}
+@media (min-width:1367px) {
+
+}

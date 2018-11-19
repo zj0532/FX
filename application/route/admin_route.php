@@ -8,7 +8,7 @@ Route::get('/admcncp/login','admin/login/get_login');//登陆页面
 //Route::get('/admcncp/jilu/:page','admin/index/get_jilu');//操作记录页面
 
 Route::post('/admcncp/login','admin/login/post_login');//登陆逻辑
-Route::post('/admcncp/quit','admin/login/post_quit');//登陆逻辑
+Route::post('/admcncp/quit','admin/login/post_quit');//退出逻辑
 
 //用户路由
 Route::get('/admcncp/index_add','admin/index/get_index_add');//管理员 添加
@@ -19,12 +19,12 @@ Route::post('/admcncp/indexEdit/:id','admin/index/post_index_edit');//管理员 
 
 
 //新闻
-Route::get('admcncp/news/:page','admin/new/get_news_list');
+Route::get('admcncp/news/','admin/new/get_news_list');
 Route::get('admcncp/newsAdd','admin/new/get_news_add');
 Route::post('admcncp/newsAdd','admin/new/post_news_add');
-Route::get('admcncp/newsEdit/:id/:page','admin/new/get_news_edit');
-Route::post('admcncp/newsEdit/:id/:page','admin/new/post_news_edit');
-Route::get('admcncp/newsDel/:id/:page','admin/new/get_news_del');
+Route::get('admcncp/newsEdit/:id','admin/new/get_news_edit');
+Route::post('admcncp/newsEdit/:id/','admin/new/post_news_edit');
+Route::get('admcncp/newsDel/:id/','admin/new/get_news_del');
 
 
 //联系我们

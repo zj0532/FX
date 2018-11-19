@@ -71,7 +71,7 @@
                                      <div class="col-lg-10">
                                          <input type="file"   id="ns_img" name="ns_img" >
                                          {if condition="$list.ns_img!=''"}
-                                         <img src="{$imgpath}{$list.ns_img}" height="150">
+                                         <img src="{$img_path}{$list.ns_img}" height="150">
                                          {/if}
                                      </div>
                                  </div>
@@ -91,7 +91,6 @@
                                   <div class="form-group">
                                      <div class="col-lg-offset-2 col-lg-10">
                                      <input type="hidden" id="id" name="id" value="{$list.ns_id}">
-                                     <input type="hidden" id="page" name="page" value="{$page}">
                                          <button class="btn btn-danger" type="button" onClick="checktj()">提交</button>
                                      </div>
                                  </div>

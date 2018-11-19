@@ -1,18 +1,38 @@
-h3{
-    font-size:21px;
-    font-family:FZLTXHK;
-    font-weight:400;
-    color:rgba(89,89,89,1);
-    line-height:18px;
+.new-info img{
+    width:753px;
+    height:415px;
+    margin: 58px 0 16px 0;
 }
-h6{
+.news-info-content{
+    margin: 0 0 195px 62px;
+}
+.news-info-content p:first-child{
     font-size:11px;
-    font-family: FZLTXHK, serif;
-    font-weight:400;
-    color:rgba(129,129,129,1);
-    line-height:21px;
+    font-family:MicrosoftYaHei;
+    font-weight:800;
+    color:rgba(51,51,51,1);
 }
-.info-img{
-    width:124px;
-    height:33px;
+.news-info-content p:nth-child(2){
+    font-size:11px;
+    font-family:MicrosoftYaHei;
+    font-weight:400;
+    color:rgba(51,51,51,1);
+}
+.news-info-content p:nth-child(3){
+    font-size:18px;
+    font-family:ArialMT;
+    font-weight:bold;
+    color:rgba(51,51,51,1);
+}
+.news-info-content p:nth-child(4){
+    font-size:11px;
+    font-family:MicrosoftYaHei;
+    font-weight:400;
+    color:rgba(51,51,51,1);
+}
+.news-info-content p:nth-child(5),p:nth-child(6),p:nth-child(7){
+    font-size:11px;
+    font-family:MicrosoftYaHei;
+    font-weight:400;
+    color:rgba(51,51,51,1);
 }

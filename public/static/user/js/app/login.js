@@ -1,5 +1,6 @@
 $(".form-signin").on("click", "#btn_login", function() {
-  $.post("/user/login",{
+  alert('12312311111');
+  $.post("/admcncp/login",{
     yonghuming:$("#ipt_user_id").attr("value"),
     mima:$("#ipt_password").attr("value")
   },function(data,status){

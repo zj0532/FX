@@ -2,76 +2,35 @@
 {include file="public/head" /}
 <link type="text/css" href="/static/www/css/index.css" rel="stylesheet">
 
-<div class="container-fluid" style="padding: 0px">
-    <div class="row" style="margin: 0px">
-            <!--banner-->
-            <div class="col-md-12" style="padding: 0px">
-                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                    <!-- Indicators -->
-                    <ol class="carousel-indicators">
-                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                    </ol>
-
-                    <!-- Wrapper for slides -->
-                    <div class="carousel-inner carousel-img" role="listbox">
-                        <div class="item active">
-                            <img src="/static/www/img/index/banner.png" alt="">
-                        </div>
-                        <div class="item">
-                            <img src="/static/www/img/index/banner.png" alt="">
-                        </div>
-                        <div class="item">
-                            <img src="/static/www/img/index/banner.png" alt="">
-                        </div>
-                    </div>
-
-                    <!-- Controls -->
-                    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </div>
-            </div>
-            <!--导航-->
-            <div class="menu-text">
-                <ul>
-                    <li><a href="#">首页</a></li>
-                    <li><a href="#">应用</a></li>
-                    <li><a href="#">新闻</a></li>
-                    <li><a href="#">关于</a></li>
-                </ul>
-            </div>
-        <div class="col-md-12 padding-0">
-            <!--什么是区块链-->
-            <div class="one-bj">
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <!--什么是区块链-->
                 <!--图片-->
                 <div class="block-chain">
                     <img src="/static/www/img/index/qu_kuai_lian.png" width="100%">
                 </div>
-                <!--文字-->
-                <div class="block-chain-text">
-                    <!--图标-->
-                    <div class="shu-xian">
-                        <img src="/static/www/img/index/shu_xian.png" width="100%">
+                    <!--文字-->
+                    <div class="block-chain-text">
+                        <!--图标-->
+                        <div class="shu-xian">
+                            <img src="/static/www/img/index/shu_xian.png" width="100%">
+                        </div>
+                        <div><h1>什么是区块链</h1></div>
+                        <div>
+                            <p>
+                                区块链是一种以密码学技术为基础，以去中心化的方式，对大量数据进行组织和维护的数据
+                                结构。区块链特别适合用作电子现金或数字资产的账本。区块链上的数据全部都附有相关人
+                                的数字签名，不可伪造。此外，区块链还具有完全公开、高可靠性、即时交割、去信任等诸
+                                多优点，以区块链技术构建的财务系统相对于中心化的传统金融机构有着压倒性优势。我们
+                                认为区块链技术将成为金融网络的主流底层技术。
+                            </p>
+                        </div>
                     </div>
-                    <div><h1>什么是区块链</h1></div>
-                    <div>
-                        <p>
-                            区块链是一种以密码学技术为基础，以去中心化的方式，对大量数据进行组织和维护的数据
-                            结构。区块链特别适合用作电子现金或数字资产的账本。区块链上的数据全部都附有相关人
-                            的数字签名，不可伪造。此外，区块链还具有完全公开、高可靠性、即时交割、去信任等诸
-                            多优点，以区块链技术构建的财务系统相对于中心化的传统金融机构有着压倒性优势。我们
-                            认为区块链技术将成为金融网络的主流底层技术。
-                        </p>
-                    </div>
-                </div>
             </div>
+            <div class="col-md-2"></div>
         </div>
 
         <!--汇率区域块链的应用场景-->
@@ -96,72 +55,100 @@
                     <div><span>积分点券</span></div>
                 </div>
                 <!--图片描述-->
-                <div>
-                    <div>
+                <div class="area-block-pic-text">
+                    <div style="float: left">
                         <!--左面第一段-->
-                        <p></p>
+                        <p>
+                            与比特币等基于区块链的支付系统不同，FOREXCOIN 是一个基于区块链的电子记录系统。
+                        </p>
                         <!--左面第二段-->
-                        <p></p>
+                        <p>
+                            用户与用户间通过私钥对汇率进行上传，从而完成外汇汇率的记录。实际上，FOREXCOIN可以被用于任何汇率的交易计算上，及时的记录每一笔的外汇交易记录，
+                            给用户提供最全面的交易订单和报价。
+                        </p>
                     </div>
                     <!--右面文字描述-->
-                    <div>
-                        <p></p>
+                    <div style="float: left;">
+                        <p>
+                            FOREXCOIN 系统中会给每一个上传汇率的用户“挖矿者”进行奖励，用户获得积分后可以参与每个货币汇率波动的评估，
+                            点击参与“货币走势游戏”可以根据货币走势的不同获得不同的积分。积分可以在商城中获取实物商品。
+                        </p>
                     </div>
                 </div>
+        </div>
                 <!--联系我们-->
-                <div>
+                <div class="col-md-12 padding-0 contact-us-bj">
                     <!--标题-->
-                    <div>
+                    <div class="text-center">
                         <!--标题图片-->
-                        <div><img></div>
-                        <!--标题文字-->
-                         <div><h3>联系我们</h3></div>
+                        <div class="contact-us-title">
+                            <img src="/static/www/img/index/shu_xian.png">
+                            <span>联系我们</span>
+                        </div>
                         <!--表单-->
-                        <form>
-                            <div>
-                                <div>
+                        <form class="contact-us-form">
+                            <div >
+                                <div class="form-group">
                                     <input type="text" placeholder="姓名*" required>
-                                </div>
-                                <div>
                                     <input type="text" placeholder="邮箱*" required>
                                 </div>
-                                <div>
+                                <div class="form-group">
                                     <input type="text" placeholder="电话*" required>
-                                </div>
-                                <div>
                                     <input type="text" placeholder="标题*" required>
                                 </div>
-                                <div>
+                                <div class="form-group">
                                     <textarea placeholder="内容*"></textarea>
                                 </div>
-                                <input class="contact-us" id="contact_us" type="button"  value="提交">
+                                <input class="contact-us-button" id="contact_us" type="button"  value="提交">
                             </div>
                         </form>
+                    </div>
+                </div>
                         <!--FXC的设计思考-->
-                        <div>
+                        <div class="col-md-12 padding-0">
                             <!--标题图标-->
-                            <div><img></div>
-                            <!--标题文字-->
-                            <div><h4>FXC的设计思考</h4></div>
+                            <div class="text-center design-thinking-title">
+                                <img src="/static/www/img/index/shu_xian.png">
+                                <span>FXC的设计思考</span>
+                            </div>
                             <!--文字和图片-->
-                            <div>
+                            <div class="col-md-12 design-thinking-text">
                                 <!--文字-->
-                                <div><p></p></div>
+                                <div class="col-md-2"></div>
+                                <div class="col-md-4 text-box">
+                                    <p>
+                                        2016年以来我们一直在思考将区块链应用外汇交易领域，以解决外汇交易平台商面临的痛点。2017年4月我们发布了FXC大脑平台，
+                                        完成了人工智能操作系统的底层算法设计和应用，目前有超过100家厂商，20W用户使用，连接了超过500款智能设备。
+                                        2017年8月我们发布了FXC的白皮书草稿，与区块链社区爱好者们共同研究解决有关区块链的人工智能问题，构建区块链驱动的下一代外汇交易计算平台。
+                                    </p>
+                                </div>
                                 <!--图片-->
-                                <div><img alt="FXC的设计思考"></div>
+                                <div class="col-md-4">
+                                    <img src="/static/www/img/index/she_ji_si_xiang.png" alt="FXC的设计思考">
+                                </div>
+                                <div class="col-md-2"></div>
                                 <!--文字-->
-                                <div>
-                                    <!--标题-->
-                                    <p></p>
-                                    <!--有序列表-->
-                                    <ul type="1">
-                                        <ol></ol>
-                                        <ol></ol>
-                                        <ol></ol>
-                                    </ul>
+                                <div class="col-md-12">
+                                    <div class="col-md-2"></div>
+                                    <div class="col-md-8 principle">
+                                        <!--标题-->
+                                        <p>对于FXC的设计我们思考如下原则：</p>
+                                        <!--有序列表-->
+                                        <ul>
+                                            <li>1.扩展原则：FXC每一个模块应该是松耦合的，很容易添加新的模块进来，每个模块本身更新不应该需要其他模块接口的变化。</li>
+                                            <li>
+                                                2.伸缩原则：FXC的客户产品用户访问是波动的，如果大量用户访问到一个节点的时候，必然会带来节点的服务崩溃，所以节点的容器本身应该可以自动化部署，
+                                                当用户请求出现压力的时候可以快速的实现横向扩展。
+                                            </li>
+                                            <li>3.隐私原则：FXC生态的各方参与者，挖矿节点、外汇交易厂商、数据提供者等可以得到隐私保护，参与者可以根据自己的需求来选择性开放。</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-2"></div>
                                 </div>
                                 <!--错位图片-->
-                                <div><img src="错位图片"></div>
+                                <div class="dislocation-pic">
+                                    <img src="/static/www/img/index/cuo_wei.png">
+                                </div>
                             </div>
                         </div>
                     </div>

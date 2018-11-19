@@ -11,48 +11,38 @@ namespace app\admin\controller;
 
 use think\Controller;
 use think\Db;
+use app\admin\model\NewsModel;
+use think\Request;
+use think\Log;
 
 class NewController extends Controller
 {
+    private $news;
+    public function __construct(Request $request = null)
+    {
+        parent::__construct($request);
+        $this->news = new NewsModel();
+    }
+
     //公司新闻 列表
     public function get_news_list()
     {
-        //判断过期时间
-        $this->session_end();
-        //判断登陆状态
-        if (!session('?admin_dengluming')) {
-            return redirect('/admcncp/login');
+        try{
+            //判断过期时间
+            $this->session_end();
+            //判断登陆状态
+            if (!session('?admin_dengluming')) {
+                return redirect('/admcncp/login');
+            }
+            $list = $this->news->paginate(5);
+            $imgpath=config("news_upload_path");
+            $this->assign('sidebar','2');
+            $this->assign('list',$list);
+            $this->assign('imgpath',$imgpath);
+        }catch (\Exception $e){
+            Log::write($e->getMessage(),'error');
         }
-
-        $j["sidebar"] = 2;
-        $data=input();
-        $data['page']=intval($data['page'])?intval($data['page']):1;
-        $pagesize=30;
-        $page=$data['page'];
-        $start=($page-1)*$pagesize;
-        $step=$pagesize;
-
-        $sqlnum = "select count(*) num from base_news  ";
-        $resultnum=Db::query($sqlnum);
-        //print_r($resultnum); exit();
-        //总记录数
-        $data["countnum"] = $resultnum[0]['num'];
-        //总页数
-        $pagenumber=floor($resultnum[0]['num']/$pagesize)+1;
-        $data['countpage']=$pagenumber;
-        //上一页
-        $data['shangpage']=intval($page)>1?intval($page)-1:1;
-        //下一页
-        $data['xiapage']=intval($page)<$pagenumber?intval($page)+1:intval($page);
-
-        $j["data"] = $data;
-        //print_r($j); exit();
-
-
-        $sql="SELECT * FROM base_news order by ns_id desc limit " . $start . ", " . $step;
-        $j['list']=Db::query($sql);
-        $j['imgpath']=config("news_upload_path");
-        return view('news',$j);
+        return $this->fetch('news');
     }
     //新增公司新闻 页面
     public function get_news_add()
@@ -78,13 +68,7 @@ class NewController extends Controller
             return redirect('/admcncp/login');
         }
         $data = input('post.');//通过助手将POST所有数据交给 data
-        //print_r($data);
-        //$files = input('FILES');//通过助手将POST所有数据交给 data
-        //print_r($_FILES);
-
-
         // 获取表单上传文件 例如上传了001.jpg
-        $imgUp=0;
         $file = request()->file('ns_img');
         $imgname = "";
         // 移动到框架应用根目录/static/uploads/gonggao/ 目录下
@@ -102,48 +86,55 @@ class NewController extends Controller
             {
                 // 上传失败获取错误信息
                 return show(500,"图片上传失败，请重试",[],200);
-
-
-
             }
         }
         $data['ns_title']=addslashes($data['ns_title']);
         $data['ns_descript']=addslashes($data['ns_descript']);
         if($imgname)
         {
-            $sql="insert into base_news (ns_language,ns_title,ns_img,ns_intime,ns_descript,ns_content) VALUES 
-		  ('".$data['ns_language']."','".$data['ns_title']."','".$imgname."','".time()."','".$data['ns_descript']."','".$data['editor1']."')";
+            $this->news->data([
+                'ns_language' => $data['ns_language'],
+                'ns_title' => $data['ns_title'],
+                'ns_img' => $imgname,
+                'ns_descript' => $data['ns_descript'],
+                'ns_content' => $data['editor1'],
+            ]);
+            $this->news->save();
         }
         else
         {
-            $sql="insert into base_news (ns_language,ns_title,ns_intime,ns_descript,ns_content) VALUES 
-		  ('".$data['ns_language']."','".$data['ns_title']."','".time()."','".$data['ns_descript']."','".$data['editor1']."')";
+            $this->news->data([
+                'ns_language' => $data['ns_language'],
+                'ns_title' => $data['ns_title'],
+                'ns_descript' => $data['ns_descript'],
+                'ns_content' => $data['editor1'],
+            ]);
+            $this->news->save();
         }
-        Db::execute($sql);
 
-        $tiaozhuanlujing="/admcncp/news/1";
+        $tiaozhuanlujing="/admcncp/news/";
         return redirect($tiaozhuanlujing);
     }
     //编辑公司新闻 页面
     public function get_news_edit()
     {
-        //判断过期时间
-        $this->session_end();
-        //判断登陆状态
-        if (!session('?admin_dengluming')) {
-            return redirect('/admcncp/login');
+        try{
+            //判断过期时间
+            $this->session_end();
+            //判断登陆状态
+            if (!session('?admin_dengluming')) {
+                return redirect('/admcncp/login');
+            }
+            $data = input();//通过助手将POST所有数据交给 data
+            $list = $this->news->where('ns_id',$data['id'])->find();
+            $img_path = config("news_upload_path");
+            $this->assign('img_path',$img_path);
+            $this->assign('list',$list);
+            $this->assign('sidebar','3');
+        }catch (\Exception $e){
+            Log::write($e->getMessage(),'error');
         }
-        $data = input();//通过助手将POST所有数据交给 data
-
-        $sql="select * from base_news where ns_id='".$data['id']."'";
-        $aa=Db::query($sql);
-        $j['list']=$aa[0];
-        $j['id']=$data['id'];
-        $j['page']=$data['page'];
-        $j['imgpath']=config("news_upload_path");
-        $j["sidebar"] = 3;
-        //print_r($j);exit();
-        return view('news_edit',$j);
+        return $this->fetch('news_edit');
     }
     //编辑公司新闻 提交处理
     public function post_news_edit()
@@ -155,10 +146,8 @@ class NewController extends Controller
             return redirect('/admcncp/login');
         }
         $data = input('post.');//通过助手将POST所有数据交给 data
-        //print_r($data);exit();
 
         // 获取表单上传文件 例如上传了001.jpg
-        $imgUp=0;
         $file = request()->file('ns_img');
 
         $imgname = "";
@@ -171,30 +160,36 @@ class NewController extends Controller
                 // 成功上传后 获取上传信息
                 // 输出 jpg
                 $imgname = $info->getSaveName();
-                $imgUp=1;
             }
             else
             {
                 // 上传失败获取错误信息
                 return show(500,"图片上传失败，请重试",[],200);
-
-
-
             }
         }
         $data['ns_title']=addslashes($data['ns_title']);
         $data['ns_descript']=addslashes($data['ns_descript']);
         if($imgname)
         {
-            $sql="update base_news set ns_language='".$data['ns_language']."',ns_title='".$data['ns_title']."',ns_img='".$imgname."',ns_descript='".$data['ns_descript']."',ns_content='".$data['editor1']."' where ns_id='".$data['id']."'";
+            $this->news->save([
+                'ns_language' => $data['ns_language'],
+                'ns_title' => $data['ns_title'],
+                'ns_img' => $imgname,
+                'ns_descript' => $data['ns_descript'],
+                'ns_content' => $data['editor1'],
+            ],['ns_id'=>$data['id']]);
         }
         else
         {
-            $sql="update base_news set ns_language='".$data['ns_language']."',ns_title='".$data['ns_title']."',ns_descript='".$data['ns_descript']."',ns_content='".$data['editor1']."' where ns_id='".$data['id']."'";
+            $this->news->save([
+                'ns_language' => $data['ns_language'],
+                'ns_title' => $data['ns_title'],
+                'ns_descript' => $data['ns_descript'],
+                'ns_content' => $data['editor1'],
+            ],['ns_id'=>$data['id']]);
         }
-        Db::execute($sql);
 
-        $tiaozhuanlujing="/admcncp/news/".$data['page'];
+        $tiaozhuanlujing="/admcncp/news/";
         return redirect($tiaozhuanlujing);
     }
     //删除公司新闻 页面
@@ -207,10 +202,8 @@ class NewController extends Controller
             return redirect('/admcncp/login');exit();
         }
         $data = input();//通过助手将POST所有数据交给 data
-
-        $sql="delete from base_news where ns_id='".$data['id']."'";
-        Db::query($sql);
-        $tiaozhuanlujing="/admcncp/news/".$data['page'];
+        $this->news->destroy($data['id']);
+        $tiaozhuanlujing="/admcncp/news/";
         return redirect($tiaozhuanlujing);
     }
 }

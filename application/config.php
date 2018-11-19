@@ -239,8 +239,8 @@ return [
     // +----------------------------------------------------------------------
     // | 自定义配置
     // +----------------------------------------------------------------------
-    'web_name' => '中农伟业',
-    'web_name2' => 'DOBAI',
+    'web_name' => 'FOREXCOIN',
+    'web_name2' => 'FOREXCOIN',
     'user_upload_path' => '/static/user/uploads/',
     'admin_upload_path' => '/static/admin/uploads/',
     'news_upload_path' => '/static/uploads/news/',

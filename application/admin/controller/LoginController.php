@@ -28,7 +28,7 @@ class LoginController extends Controller
 	//初始为300
 	$res = ["stat" => "300"];
 	
-    $data = input('post.');//通过助手将POST所有数据交给 data
+    $data = input();//通过助手将POST所有数据交给 data
 	
 	$validate = validate('LoginValidate');//实例化 验证器
     if (!$validate->check($data)) {
@@ -37,7 +37,8 @@ class LoginController extends Controller
     }
 
 
-	$result = Db::query('SELECT * FROM base_admin WHERE dengluming=:dengluming and mima=md5(:mima) and zhuangtai=1', $data);
+	$result = Db::query('SELECT * FROM base_admin WHERE dengluming=:dengluming and mima=md5(:mima) and zhuangtai=1',
+        ['dengluming'=>$data['dengluming'],'mima'=>$data['mima']]);
 	//return $result;
 	//$sql="select * from admin where dengluming='".input("ipt_user_id")."'";
 

@@ -1,51 +1,133 @@
-small{
-    color: #8B8B8B;
+.about-one{
+    margin-top: 88px;
+    height: 573px;
 }
-
-h2{
-    font-size:28px;
-    font-family:FZLTXHK;
+.about-one i{
+   margin-top: -5px;
+}
+.about-one span{
+    font-size:25px;
+    font-family:MicrosoftYaHei;
+    font-weight:bold;
+    color:rgba(51,51,51,1);
+    line-height:42px;
+}
+.about-one-p{
+    width:369px;
+    height:100px;
+}
+.about-one-p p{
+    font-size:17px;
+    font-family:MicrosoftYaHei;
+    font-weight:600;
+    color:rgba(51,51,51,1);
+    line-height:42px;
+}
+.about-one-text{
+    width:551px;
+    height:239px;
+    z-index: 3;
+    position: absolute;
+    left: -328px;
+    top: 198px;
+    font-size:11px;
+    font-family:MicrosoftYaHei;
     font-weight:400;
-    color:rgba(61,61,61,1);
-    line-height:22px;
+    color:rgba(51,51,51,1);
+    line-height:20px;
 }
+.shu-xian{
+    width:3px;
+    height:20px;
+    background:rgba(254,131,12,1);
+    float: left;
+    margin:10px 10px 0 0;
+}
+.about-one img:first-child{
+    width:438px;
+    height:384px;
+    border-radius:7px;
+    position: absolute;
+    z-index: 1;
+    margin-left: 18px;
+}
+.about-one img:nth-child(2){
+    width:653px;
+    height:325px;
+    position: absolute;
+    left:-378px;
+    top:162px;
+    z-index: 2;
+}
+/*汇率区域块链的特点*/
+.characteristic{
+    background:rgba(241,240,240,1);
+    padding-top: 85px;
+}
+.characteristic-shu-xian{
+    width:3px;
+    height:24px;
+    background:rgba(254,131,12,1);
+    position: absolute;
+    left: 550px;
+    top:10px;
+}
+.characteristic h1{
+    font-size:25px;
+    font-family:MicrosoftYaHei;
+    font-weight:bold;
+    color:rgba(51,51,51,1);
+    line-height:42px;
+    margin: 0;
+}
+.one-margin{
+    margin: 81px 0 174px 0;
 
-h3{
-    color:#8DBE42 ;
+}
+.left-text p{
+    font-size:18px;
+    font-family:MicrosoftYaHei;
+    font-weight:bold;
+    color:rgba(51,51,51,1);
+    line-height:34px;
+    margin: 0;
+}
+.left-text span{
+    font-size:11px;
+    font-family:MicrosoftYaHei;
+    font-weight:600;
+    color:rgba(51,51,51,1);
+    line-height:23px;
+}
+.one-img{
+    width:400px;
+    height:478px;
+    margin-top: 39px;
+}
+.two-img{
+    width:399px;
+    height:226px;
+}
+.left-text{
+    width:386px;
+}
+.right-down-text{
+    margin-top: 38px;
+}
+.right-down-text p{
+    font-size:18px;
+    font-family:MicrosoftYaHei;
+    font-weight:bold;
+    color:rgba(51,51,51,1);
+    line-height:34px;
+}
+.right-down-text span{
+    font-size:11px;
+    font-family:MicrosoftYaHei;
+    font-weight:600;
+    color:rgba(51,51,51,1);
+    line-height:26px;
 }
 @media (min-width:1367px) {
-    .enterprise-introduction h2{
-        font-size:40px;
-        font-family:FZLTXHK;
-        font-weight:400;
-        color:rgba(61,61,61,1);
-        line-height:31px;
-        margin-bottom: 18px;
-    }
-    .enterprise-introduction small{
-        font-size:20px;
-        font-family:FZLTXHK;
-        font-weight:400;
-        color:rgba(139,139,139,1);
-    }
-    .enterprise-introduction h12{
-        font-size:16px;
-        font-family:FZLTXHK;
-        font-weight:400;
-        color:rgba(90,90,90,1);
-        line-height:31px;
-    }
-    .enterprise-introduction h3{
-        font-size:36px;
-        font-family:FZLTXHK;
-        font-weight:400;
-        color:rgba(141,190,66,1);
-        line-height:31px;
-    }
-    .enterprise-introduction h6{
-        font-size:14px;
-        font-family:FZLTXHK;
-        font-weight:400;
-        line-height:31px;
-    }
+
 }

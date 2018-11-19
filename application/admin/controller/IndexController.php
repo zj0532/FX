@@ -129,7 +129,7 @@ class IndexController extends Controller
 	  //print_r($_POST);
 	  $data = input('post.');//通过助手将POST所有数据交给 data
 	  
-	$validate = validate('IndexController');//实例化 验证器
+	$validate = validate('Index');//实例化 验证器
 	if (!$validate->check($data)) {
 		$err_id = $validate->getError();
 		return show($err_id, $validate->get_message($err_id), [], 200);
