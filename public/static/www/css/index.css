@@ -134,13 +134,12 @@
 .contact-us-button{
     width:843px !important;
     height:42px !important;
-    background:rgba(254,131,12,1);
-    border: none;
-    font-size:13px;
-    font-family:MicrosoftYaHei;
-    font-weight:bold;
-    color:rgba(255,255,255,1);
-    line-height:42px;
+    background:rgba(254,131,12,1);!important;
+    border: none;!important;
+    font-family:MicrosoftYaHei;!important;
+    font-weight:bold;!important;
+    color:rgba(255,255,255,1);!important;
+    letter-spacing:20px;
 }
 /*FXC的设计思考*/
 .design-thinking-title{
@@ -199,7 +198,7 @@
     line-height:34px;
 }
 ul{
-    padding: 0;
+    /*padding: 0;*/
 }
 ul li{
     list-style: none;

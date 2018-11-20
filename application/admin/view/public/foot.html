@@ -33,6 +33,19 @@
 
   $(function() {
     $('select.styled').customSelect();
+    var id;
+    $('#contact_us_1,#contact_us_2,#contact_us_3,#contact_us_4,#contact_us_5,#contact_us_6,#contact_us_7,#contact_us_8').click(function(){
+        id = $(this).attr('name');
+        console.log(id);
+        $.ajax({
+            url:'/admcncp/contactUsDel/'+id,
+            type:'post',
+            success:function(data){
+                alert(data.message);
+                location.reload();
+            }
+        })
+    })
   });
 </script>
 

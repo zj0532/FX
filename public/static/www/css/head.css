@@ -4,25 +4,7 @@
     height: 37px;
     float: left;
 }
-.login_text{
 
-    float: right;
-    margin-right:253px;
-}
-.login_text ul li{
-    list-style: none;
-    float: left;
-    margin-top: 15px;
-}
-.login_text ul li:not(:nth-child(1)){
-    margin-left: 70px;
-}
-.login_text ul li a{
-    font-size:11px;
-    font-family:MicrosoftYaHei;
-    font-weight:400;
-    color:rgba(255,255,255,1);
-}
 .head-bj{
     height: 42px;
 }
@@ -55,13 +37,11 @@
     color:rgba(254,131,12,1);
 }
 .head-new{
-    margin-top: 65px;
+    margin-top: 1px;
 }
 @media (min-width:1367px) {
     .login{
 
     }
-    .login_text{
 
-    }
 }

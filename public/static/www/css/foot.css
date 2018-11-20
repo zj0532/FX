@@ -1,27 +1,4 @@
-.foot-table{
-    width:274px;
-    height:291px;
-    background:rgba(56,62,70,1);
-    box-shadow:0px 2px 8px 3px rgba(0, 0, 0, 0.27);
-    position: absolute;
-    left: 110px;
-    margin-top: -44px;
-}
-.foot-table-logo{
-    width:213px;
-    height:50px;
-    margin: 35px 0 0 23px;
-}
-.foot-table p{
-    font-size:13px;
-    font-family:MicrosoftYaHei;
-    font-weight:bold;
-    color:rgba(255,255,255,1);
-    margin: 30px 0 0 10px;
-}
-.foot-table form{
-    margin-top: 14px;
-}
+
 .button-size input{
     width:104px;
     height:35px;
@@ -29,7 +6,7 @@
     border: 0;
 }
 .customer-notice{
-    margin:70px;
+    margin-top:70px;
 }
 .customer-notice ul li:first-child{
     font-size:13px;
@@ -37,6 +14,9 @@
     font-weight:bold;
     color:rgba(255,255,255,1);
     /*margin-bottom: 25px;*/
+}
+.customer-notice ul li a{
+    color:rgba(255,255,255,1);
 }
 .customer-notice ul li:not(:first-child){
     font-size:10px;
@@ -54,6 +34,9 @@
 }
 .customer-notice .col-md-1{
     margin-left: 45px;
+}
+.privacy{
+    width: 100px;
 }
 @media (min-width:1367px) {
 

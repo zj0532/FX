@@ -1,0 +1,6 @@
+.public-sale-rules-text div h1{
+    margin-top: 60px;
+}
+.public-sale-rules-text div:last-child{
+    margin: 40px 0 100px 0;
+}
