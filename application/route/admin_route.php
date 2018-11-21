@@ -29,4 +29,12 @@ Route::get('admcncp/contactUs/','admin/contactUs/get_contact_us_list');
 Route::get('admcncp/contactUsSee/:id/','admin/contactUs/get_contact_us_see');
 Route::post('admcncp/contactUsDel/:id/','admin/contactUs/get_contact_us_del');
 
+//底部导航
+Route::get('/navigation','admin/navigation/get_navigation_list');
+Route::get('/navigationEditAdd','admin/navigation/get_navigation_add');
+Route::post('/navigationEditAdd','admin/navigation/post_navigation_add');
+Route::get('/navigationEdit/:id','admin/navigation/get_navigation_edit');
+Route::post('/navigationEdit','admin/navigation/post_navigation_edit');
+
+
 ?>

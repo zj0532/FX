@@ -9,7 +9,6 @@
     height: 42px;
 }
 .carousel-img img{
-    width: 1349px;
     height: 623px;
 }
 .menu-text{
@@ -40,8 +39,8 @@
     margin-top: 1px;
 }
 @media (min-width:1367px) {
-    .login{
-
+    .carousel-img img{
+        height: 879px;
     }
 
 }
