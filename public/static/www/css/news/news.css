@@ -1,10 +1,4 @@
-.news-title div{
-    width:3px;
-    height:25px;
-    background:rgba(254,131,12,1);
-    float: left;
-    margin:7px 15px 0 640px;
-}
+
 .news-title span{
     font-size:25px;
     font-family:MicrosoftYaHei;
@@ -13,6 +7,9 @@
 }
 .news-title{
     margin: 89px 0 63px 0;
+}
+.news-title span:first-child{
+    color: rgba(254,131,12,1);;
 }
 .news_underline{
     width:266px;
@@ -60,4 +57,9 @@
 }
 .news-border a:hover{
     text-decoration: underline;
+}
+@media (min-width:1367px) {
+    .news-title{
+        margin: 100px 0 100px 0;
+    }
 }

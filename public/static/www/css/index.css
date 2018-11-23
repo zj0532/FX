@@ -13,7 +13,7 @@
     float: right;
 }
 .shu-xian{
-
+    color:rgba(254,131,12,1) !important;
 }
 .block-chain-text span{
     margin: 0;
@@ -43,7 +43,7 @@
 .area-block-title{
     margin: 89px 0 0 0;
 }
-.area-block-title h2{
+.area-block-title span{
     font-size:25px;
     font-family:MicrosoftYaHei;
     font-weight:bold;
@@ -52,39 +52,9 @@
     margin:-10px 0 0 13px;
 }
 .area-block-img{
-    margin: 226px 0 0 0;
+    margin: 100px 0 0 0;
 }
 
-/*.area-block-pic-title{*/
-    /*float: left;*/
-    /*margin: 53px 0 10px 394px;*/
-/*}*/
-/*.area-block-pic-title div{*/
-    /*float: left;*/
-/*}*/
-/*.area-block-pic-title div:nth-child(2){*/
-    /*margin-left: 352px;*/
-/*}*/
-/*.area-block-pic-title span{*/
-    /*font-size:18px;*/
-    /*font-family:MicrosoftYaHei;*/
-    /*font-weight:bold;*/
-    /*color:rgba(51,51,51,1);*/
-    /*line-height:34px;*/
-/*}*/
-/*.area-block-pic-text{*/
-    /*margin-left: 267px;*/
-    /*float: left;*/
-/*}*/
-/*.area-block-pic-text div:first-child{*/
-    /*width:391px;*/
-    /*height:146px;*/
-/*}*/
-/*.area-block-pic-text div:nth-child(2){*/
-    /*width:384px;*/
-    /*height:95px;*/
-    /*margin-left: 34px;*/
-/*}*/
 .contact-us-bj{
     background-image: url("/static/www/img/index/lian_xi.png");
     background-size: 100% 100%;
@@ -114,6 +84,18 @@
 }
 .form-group:not(:first-child){
     margin-top: 28px;
+}
+.form-group .col-md-6{
+    margin-top: 20px;
+}
+.form-group .col-md-12{
+    margin-top: 20px;
+}
+.contact-us-button{
+    margin-top: 20px;
+}
+.form-group textarea{
+    height: 150px;
 }
 .contact-us-button{
     background:rgba(254,131,12,1);!important;
@@ -180,7 +162,7 @@
     line-height:34px;
 }
 ul{
-    /*padding: 0;*/
+    padding-left: 0;
 }
 ul li{
     list-style: none;
@@ -190,6 +172,22 @@ ul li{
     height:351px;
     margin-top: 0px;
     margin-left: 0;
+}
+.exchange-rate-text{
+    margin: 10px 0 0 -32px;
+    width: 338px;
+}
+.exchange-rate-text p:last-child{
+    margin-bottom: 100px;
+}
+.cuo-wei img{
+    width:249px;
+    height:327px;
+    position: absolute;
+    margin-top: -338px;
+}
+.index-foot{
+    margin-top: 181px;
 }
 @media (min-width:1367px) {
     .block-chain{
@@ -257,6 +255,14 @@ ul li{
         margin: 10px 0 0 -50px;
         width: 478px;
     }
+    .exchange-rate-text p{
+        font-size: 16px;
+        font-family: ArialMT;
+        color: rgba(51,51,51,1);
+        font-weight: 600;
+        line-height: 27px;
+        margin-top: 30px;
+    }
     .design-thinking-title span{
         font-size:36px;
         font-family:MicrosoftYaHei;
@@ -291,6 +297,13 @@ ul li{
     .text-box{
         width:550px;
     }
+    .text-box p{
+        font-size:16px;
+        font-family:MicrosoftYaHei;
+        font-weight:400;
+        color:rgba(51,51,51,1);
+        line-height:36px;
+    }
     .principle p{
         font-size:18px;
         font-family:MicrosoftYaHei;
@@ -300,6 +313,13 @@ ul li{
     }
     .principle ul{
         padding-left: 0;
+    }
+    .principle ul li{
+        font-size:16px;
+        font-family:MicrosoftYaHei;
+        font-weight:400;
+        color:rgba(51,51,51,1);
+        line-height:33px;
     }
     .index-foot{
         margin-top: 181px;

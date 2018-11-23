@@ -13,8 +13,11 @@
     line-height:42px;
 }
 .about-one-p{
-    width:369px;
-    height:100px;
+    /*width:369px;*/
+    /*height:100px;*/
+}
+.about-one-p span:first-child{
+    color: rgba(254,131,12,1);;
 }
 .about-one-p p{
     font-size:17px;
@@ -25,7 +28,6 @@
 }
 .about-one-text{
     width:551px;
-    height:239px;
     z-index: 3;
     position: absolute;
     left: -328px;
@@ -64,15 +66,10 @@
     background:rgba(241,240,240,1);
     padding-top: 85px;
 }
-.characteristic-shu-xian{
-    width:3px;
-    height:24px;
-    background:rgba(254,131,12,1);
-    position: absolute;
-    left: 550px;
-    top:10px;
+.characteristic span:first-child{
+    color: rgba(254,131,12,1);;
 }
-.characteristic h1{
+.characteristic span{
     font-size:25px;
     font-family:MicrosoftYaHei;
     font-weight:bold;
