@@ -36,6 +36,5 @@ Route::post('/navigationEditAdd','admin/navigation/post_navigation_add');
 Route::get('/navigationEdit/:id','admin/navigation/get_navigation_edit');
 Route::post('/navigationEdit','admin/navigation/post_navigation_edit');
 
-//测试接口
-Route::get('/test','admin/test/test_interface');
+
 ?>
